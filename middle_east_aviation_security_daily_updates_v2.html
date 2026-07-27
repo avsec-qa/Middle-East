@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Middle East Country Aviation Security Daily Updates portal issued by Security Quality Assurance." />
+  <title>Middle East Country Aviation Security Daily Updates</title>
+  <style>
+    :root {
+      --navy: #0b1f33;
+      --blue: #135e96;
+      --light-blue: #eaf4fb;
+      --red: #b42318;
+      --amber: #b54708;
+      --green: #067647;
+      --text: #243447;
+      --muted: #667085;
+      --line: #d9e2ec;
+      --panel: #ffffff;
+      --page: #f4f7fa;
+      --shadow: 0 8px 24px rgba(11, 31, 51, 0.08);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--page);
+      color: var(--text);
+      line-height: 1.5;
+    }
+
+    .topbar {
+      background: linear-gradient(120deg, #071625, #123c61);
+      color: white;
+      padding: 28px 20px 24px;
+      border-bottom: 5px solid #2b8ac6;
+    }
+
+    .header-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+
+    .classification {
+      display: inline-block;
+      margin-bottom: 12px;
+      padding: 5px 10px;
+      border: 1px solid rgba(255,255,255,.45);
+      border-radius: 999px;
+      font-size: 12px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      background: rgba(255,255,255,.08);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(28px, 4vw, 46px);
+      line-height: 1.12;
+      letter-spacing: -.02em;
+    }
+
+    .subtitle {
+      margin: 10px 0 0;
+      max-width: 850px;
+      color: #d8e8f4;
+      font-size: 16px;
+    }
+
+    .issuer {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      margin-top: 18px;
+      padding: 9px 14px;
+      border-radius: 6px;
+      background: #fff;
+      color: var(--red);
+      font-weight: 800;
+      letter-spacing: .025em;
+      text-transform: uppercase;
+      animation: blinkPulse 1.25s ease-in-out infinite;
+      box-shadow: 0 0 0 rgba(255,255,255,0);
+    }
+
+    .issuer::before {
+      content: "";
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--red);
+      flex: 0 0 auto;
+    }
+
+    @keyframes blinkPulse {
+      0%, 100% { opacity: 1; transform: scale(1); box-shadow: 0 0 0 0 rgba(255,255,255,.2); }
+      50% { opacity: .45; transform: scale(.985); box-shadow: 0 0 0 8px rgba(255,255,255,0); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .issuer { animation: none; }
+    }
+
+    main {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 24px 20px 50px;
+    }
+
+    .status-strip {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      margin-bottom: 22px;
+    }
+
+    .status-box {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 14px 16px;
+      box-shadow: var(--shadow);
+    }
+
+    .status-label {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+    }
+
+    .status-value {
+      margin-top: 4px;
+      font-weight: 800;
+      color: var(--navy);
+    }
+
+    .notice {
+      background: #fff7ed;
+      border: 1px solid #fed7aa;
+      border-left: 5px solid var(--amber);
+      border-radius: 8px;
+      padding: 14px 16px;
+      margin-bottom: 22px;
+    }
+
+
+    .priority-panel {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 18px;
+      box-shadow: var(--shadow);
+      margin-bottom: 22px;
+    }
+
+    .priority-intro {
+      margin: 0 0 14px;
+      color: #475467;
+      font-size: 15px;
+    }
+
+    .priority-flow {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    .priority-step {
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 14px;
+      background: #fcfcfd;
+    }
+
+    .priority-step strong {
+      display: block;
+      color: var(--navy);
+      margin-bottom: 6px;
+      font-size: 15px;
+    }
+
+    .priority-step ul {
+      margin: 8px 0 0 18px;
+      padding: 0;
+      color: #475467;
+      font-size: 14px;
+    }
+
+    .priority-step li {
+      margin-bottom: 5px;
+    }
+
+    .priority-step a {
+      color: var(--blue);
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .priority-step a:hover {
+      text-decoration: underline;
+    }
+
+    .management-line {
+      margin-top: 15px;
+      padding: 13px 14px;
+      border-left: 5px solid var(--blue);
+      background: var(--light-blue);
+      border-radius: 8px;
+      color: var(--navy);
+      font-weight: 700;
+    }
+
+    .section {
+      margin-top: 24px;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0 0 12px;
+      color: var(--navy);
+      font-size: 21px;
+    }
+
+    .section-title span {
+      display: inline-grid;
+      place-items: center;
+      width: 30px;
+      height: 30px;
+      border-radius: 7px;
+      color: white;
+      background: var(--blue);
+      font-size: 15px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 17px;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      min-height: 190px;
+    }
+
+    .card h3 {
+      margin: 0 0 7px;
+      color: var(--navy);
+      font-size: 17px;
+    }
+
+    .tag {
+      display: inline-block;
+      align-self: flex-start;
+      margin-bottom: 10px;
+      padding: 4px 8px;
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+    }
+
+    .official { color: #1849a9; background: #eff4ff; }
+    .operational { color: #067647; background: #ecfdf3; }
+    .industry { color: #7a2e0e; background: #fff1e7; }
+    .news { color: #6941c6; background: #f4f3ff; }
+
+    .card p {
+      margin: 0 0 14px;
+      color: #475467;
+      font-size: 14px;
+      flex: 1;
+    }
+
+    .btn {
+      display: inline-block;
+      text-align: center;
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 14px;
+      color: white;
+      background: var(--blue);
+      border-radius: 7px;
+      padding: 10px 12px;
+      transition: transform .15s ease, background .15s ease;
+    }
+
+    .btn:hover, .btn:focus {
+      background: #0e4e7d;
+      transform: translateY(-1px);
+    }
+
+    .country-table-wrap {
+      overflow-x: auto;
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      box-shadow: var(--shadow);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 850px;
+    }
+
+    th, td {
+      padding: 13px 14px;
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+      vertical-align: top;
+      font-size: 14px;
+    }
+
+    th {
+      color: white;
+      background: var(--navy);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+    }
+
+    tr:last-child td { border-bottom: 0; }
+    tbody tr:hover { background: #f8fbfd; }
+
+    .table-link {
+      color: var(--blue);
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .table-link:hover { text-decoration: underline; }
+
+    .assessment {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 18px;
+      box-shadow: var(--shadow);
+    }
+
+    .assessment-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .field {
+      border: 1px dashed #98a2b3;
+      border-radius: 8px;
+      padding: 12px;
+      min-height: 76px;
+      background: #fcfcfd;
+    }
+
+    .field strong {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--navy);
+      font-size: 13px;
+      text-transform: uppercase;
+    }
+
+    footer {
+      background: #071625;
+      color: #b9c8d5;
+      padding: 22px 20px;
+      font-size: 13px;
+    }
+
+    .footer-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 900px) {
+      .grid { grid-template-columns: 1fr 1fr; }
+      .status-strip { grid-template-columns: 1fr 1fr; }
+      .priority-flow { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 620px) {
+      .grid, .assessment-grid, .status-strip { grid-template-columns: 1fr; }
+      .topbar { padding-top: 22px; }
+      main { padding-left: 14px; padding-right: 14px; }
+    }
+
+    @media print {
+      body { background: white; }
+      .card, .status-box, .assessment, .country-table-wrap { box-shadow: none; }
+      .btn { color: var(--blue); background: transparent; border: 1px solid var(--blue); }
+      .issuer { animation: none; border: 1px solid #ccc; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="header-inner">
+      <div class="classification">Management Information Portal</div>
+      <h1>Middle East Country Aviation Security Daily Updates</h1>
+      <p class="subtitle">
+        Central reference page for conflict-zone advisories, airspace restrictions, NOTAMs,
+        regional authority notices, operational risk intelligence, source prioritisation and verified aviation news.
+      </p>
+      <div class="issuer">Issued by Security Avsec Quality Assurance</div>
+    </div>
+  </header>
+
+  <main>
+    <section class="status-strip" aria-label="Document information">
+      <div class="status-box">
+        <div class="status-label">Reporting Date</div>
+        <div class="status-value" id="reportingDate">—</div>
+      </div>
+      <div class="status-box">
+        <div class="status-label">Region</div>
+        <div class="status-value">Middle East</div>
+      </div>
+      <div class="status-box">
+        <div class="status-label">Update Frequency</div>
+        <div class="status-value">Daily / Event-Driven</div>
+      </div>
+      <div class="status-box">
+        <div class="status-label">Owner</div>
+        <div class="status-value">Avsec Security Quality Assurance</div>
+      </div>
+    </section>
+
+    <div class="notice">
+      <strong>Operational notice:</strong> This page is a source directory and management briefing aid.
+      All operational decisions must be verified against current NOTAMs, the relevant State AIP/AIS,
+      company procedures and the latest approved security risk assessment.
+    </div>
+
+    <section class="section" aria-label="Best daily detail sources and verification priority">
+      <h2 class="section-title"><span>★</span> Best Daily Detail Sources / Verification Priority</h2>
+      <div class="priority-panel">
+        <p class="priority-intro">
+          Use this hierarchy for management daily updates. Official NOTAM, AIP and State CAA/AIS sources
+          should be treated as the source of truth for operational decisions. Risk intelligence and news
+          sources should be used to support, explain and cross-check the official position.
+        </p>
+
+        <div class="priority-flow">
+          <div class="priority-step">
+            <strong>1. Official / Source of Truth</strong>
+            <ul>
+              <li><a href="https://notams.aim.faa.gov/notamSearch/" target="_blank" rel="noopener noreferrer">Current NOTAM Search</a></li>
+              <li><a href="https://www.easa.europa.eu/en/domains/air-operations/czibs" target="_blank" rel="noopener noreferrer">EASA Conflict Zone Advisories</a></li>
+              <li><a href="https://www.faa.gov/air_traffic/publications/us_restrictions" target="_blank" rel="noopener noreferrer">FAA Prohibitions, Restrictions &amp; Notices</a></li>
+              <li><a href="https://www.gov.uk/guidance/airspace-security-warnings" target="_blank" rel="noopener noreferrer">UK Airspace Security Warnings</a></li>
+              <li>Relevant State CAA / AIS / AIP pages listed below</li>
+            </ul>
+          </div>
+
+          <div class="priority-step">
+            <strong>2. Daily Aviation Risk Detail</strong>
+            <ul>
+              <li><a href="https://safeairspace.net/" target="_blank" rel="noopener noreferrer">Safe Airspace</a> — conflict-zone risk database, country pages and consolidated warnings.</li>
+              <li><a href="https://ops.group/" target="_blank" rel="noopener noreferrer">OPSGROUP</a> — professional operator daily brief, live ops alerts and airspace-risk intelligence.</li>
+              <li>Use these to identify emerging airspace security trends and affected routes.</li>
+            </ul>
+          </div>
+
+          <div class="priority-step">
+            <strong>3. Breaking-News Verification</strong>
+            <ul>
+              <li><a href="https://www.reuters.com/business/aerospace-defense/" target="_blank" rel="noopener noreferrer">Reuters Aerospace &amp; Defense</a></li>
+              <li><a href="https://www.flightglobal.com/safety/" target="_blank" rel="noopener noreferrer">FlightGlobal Safety</a></li>
+              <li><a href="https://apnews.com/hub/middle-east" target="_blank" rel="noopener noreferrer">AP Middle East</a></li>
+              <li><a href="https://www.bbc.com/news/world/middle_east" target="_blank" rel="noopener noreferrer">BBC Middle East</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="management-line">
+          Management verification rule: Verify first with NOTAM/AIP and the relevant State CAA/AIS,
+          then cross-check EASA/FAA/UK advisories, then use Safe Airspace/OPSGROUP for consolidated
+          risk intelligence, and Reuters/FlightGlobal/AP/BBC only for breaking-news context.
+        </div>
+      </div>
+    </section>
+
+
+    <section class="section">
+      <h2 class="section-title"><span>1</span> Critical Conflict-Zone &amp; Regulatory Advisories</h2>
+      <div class="grid">
+        <article class="card">
+          <div class="tag official">Official</div>
+          <h3>EASA Conflict Zone Advisories</h3>
+          <p>Active Conflict Zone Information Bulletins, Information Notes, risk maps and operational recommendations.</p>
+          <a class="btn" href="https://www.easa.europa.eu/en/domains/air-operations/czibs" target="_blank" rel="noopener noreferrer">Open EASA Advisories</a>
+        </article>
+
+        <article class="card">
+          <div class="tag official">Official</div>
+          <h3>FAA Prohibitions, Restrictions &amp; Notices</h3>
+          <p>Foreign-airspace flight prohibitions, SFAR restrictions, hostile-situation notices and related security information.</p>
+          <a class="btn" href="https://www.faa.gov/air_traffic/publications/us_restrictions" target="_blank" rel="noopener noreferrer">Open FAA Restrictions</a>
+        </article>
+
+        <article class="card">
+          <div class="tag official">Official</div>
+          <h3>UK Airspace Security Guidance</h3>
+          <p>UK Department for Transport notices and guidance concerning hazardous or conflict-affected foreign airspace.</p>
+          <a class="btn" href="https://www.gov.uk/guidance/airspace-security-warnings" target="_blank" rel="noopener noreferrer">Open UK Guidance</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title"><span>2</span> NOTAM, AIS &amp; Airspace Status</h2>
+      <div class="grid">
+        <article class="card">
+          <div class="tag operational">Operational</div>
+          <h3>FAA NOTAM Search</h3>
+          <p>Search current notices by airport or FIR identifier. Use only as one component of an approved pre-flight information process.</p>
+          <a class="btn" href="https://notams.aim.faa.gov/notamSearch/" target="_blank" rel="noopener noreferrer">Search NOTAMs</a>
+        </article>
+
+        <article class="card">
+          <div class="tag operational">Operational</div>
+          <h3>ICAO Operational Safety</h3>
+          <p>ICAO safety, security and air-navigation resources supporting State and operator awareness.</p>
+          <a class="btn" href="https://www.icao.int/safety/Pages/default.aspx" target="_blank" rel="noopener noreferrer">Open ICAO Safety</a>
+        </article>
+
+        <article class="card">
+          <div class="tag operational">Operational</div>
+          <h3>EUROCONTROL Network Operations</h3>
+          <p>European network and operational information useful for understanding route disruption and traffic-flow impacts.</p>
+          <a class="btn" href="https://www.eurocontrol.int/network-operations" target="_blank" rel="noopener noreferrer">Open Network Operations</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title"><span>3</span> Middle East State Aviation Authorities</h2>
+      <div class="country-table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Country / Area</th>
+              <th>Authority</th>
+              <th>Primary Use</th>
+              <th>Direct Link</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>United Arab Emirates</td>
+              <td>General Civil Aviation Authority</td>
+              <td>AIP, AIS, safety directives and regulatory notices</td>
+              <td><a class="table-link" href="https://www.gcaa.gov.ae/" target="_blank" rel="noopener noreferrer">GCAA UAE</a></td>
+            </tr>
+            <tr>
+              <td>Saudi Arabia</td>
+              <td>General Authority of Civil Aviation</td>
+              <td>Regulatory, safety and aviation-sector notices</td>
+              <td><a class="table-link" href="https://gaca.gov.sa/" target="_blank" rel="noopener noreferrer">GACA Saudi Arabia</a></td>
+            </tr>
+            <tr>
+              <td>Qatar</td>
+              <td>Qatar Civil Aviation Authority</td>
+              <td>AIS, AIP, NOTAM and official operational notices</td>
+              <td><a class="table-link" href="https://www.caa.gov.qa/" target="_blank" rel="noopener noreferrer">QCAA Qatar</a></td>
+            </tr>
+            <tr>
+              <td>Oman</td>
+              <td>Civil Aviation Authority</td>
+              <td>AIM publications, regulations and safety notices</td>
+              <td><a class="table-link" href="https://www.caa.gov.om/" target="_blank" rel="noopener noreferrer">CAA Oman</a></td>
+            </tr>
+            <tr>
+              <td>Bahrain</td>
+              <td>Civil Aviation Affairs</td>
+              <td>Aeronautical information and regulatory notices</td>
+              <td><a class="table-link" href="https://www.mtt.gov.bh/civil-aviation" target="_blank" rel="noopener noreferrer">Bahrain CAA</a></td>
+            </tr>
+            <tr>
+              <td>Kuwait</td>
+              <td>Directorate General of Civil Aviation</td>
+              <td>Operational, regulatory and airport information</td>
+              <td><a class="table-link" href="https://www.dgca.gov.kw/" target="_blank" rel="noopener noreferrer">DGCA Kuwait</a></td>
+            </tr>
+            <tr>
+              <td>Jordan</td>
+              <td>Civil Aviation Regulatory Commission</td>
+              <td>Regulations, safety information and official notices</td>
+              <td><a class="table-link" href="https://carc.gov.jo/" target="_blank" rel="noopener noreferrer">CARC Jordan</a></td>
+            </tr>
+            <tr>
+              <td>Israel</td>
+              <td>Civil Aviation Authority of Israel</td>
+              <td>Regulatory and operational aviation information</td>
+              <td><a class="table-link" href="https://www.gov.il/en/departments/civil_aviation_authority_of_israel/govil-landing-page" target="_blank" rel="noopener noreferrer">CAAI Israel</a></td>
+            </tr>
+            <tr>
+              <td>Lebanon</td>
+              <td>Directorate General of Civil Aviation</td>
+              <td>Airport, aviation and operational information</td>
+              <td><a class="table-link" href="https://www.dgca.gov.lb/" target="_blank" rel="noopener noreferrer">DGCA Lebanon</a></td>
+            </tr>
+            <tr>
+              <td>Iraq</td>
+              <td>Iraqi Civil Aviation Authority</td>
+              <td>Official regulatory and airspace information</td>
+              <td><a class="table-link" href="https://www.icaa.gov.iq/" target="_blank" rel="noopener noreferrer">ICAA Iraq</a></td>
+            </tr>
+            <tr>
+              <td>Türkiye</td>
+              <td>Directorate General of Civil Aviation</td>
+              <td>Regulations, safety notices and aviation information</td>
+              <td><a class="table-link" href="https://web.shgm.gov.tr/en" target="_blank" rel="noopener noreferrer">DGCA Türkiye</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title"><span>4</span> Aviation Security Intelligence &amp; Risk Monitoring</h2>
+      <div class="grid">
+        <article class="card">
+          <div class="tag industry">Industry</div>
+          <h3>Safe Airspace</h3>
+          <p>Conflict-zone risk summaries, country pages, airspace warnings and consolidated operator-oriented references.</p>
+          <a class="btn" href="https://safeairspace.net/" target="_blank" rel="noopener noreferrer">Open Safe Airspace</a>
+        </article>
+
+        <article class="card">
+          <div class="tag industry">Industry</div>
+          <h3>OPSGROUP</h3>
+          <p>Operational intelligence, daily briefings, alerts, airspace risk analysis and operator community reporting.</p>
+          <a class="btn" href="https://ops.group/" target="_blank" rel="noopener noreferrer">Open OPSGROUP</a>
+        </article>
+
+        <article class="card">
+          <div class="tag industry">Industry</div>
+          <h3>FlightGlobal Safety</h3>
+          <p>Aviation safety, airline operations, route disruption and regulatory developments.</p>
+          <a class="btn" href="https://www.flightglobal.com/safety/" target="_blank" rel="noopener noreferrer">Open FlightGlobal</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title"><span>5</span> Verified News &amp; Disruption Monitoring</h2>
+      <div class="grid">
+        <article class="card">
+          <div class="tag news">News</div>
+          <h3>Reuters Aerospace &amp; Defense</h3>
+          <p>Fast reporting on airspace closures, airline suspensions, diversions, security incidents and geopolitical developments.</p>
+          <a class="btn" href="https://www.reuters.com/business/aerospace-defense/" target="_blank" rel="noopener noreferrer">Open Reuters</a>
+        </article>
+
+        <article class="card">
+          <div class="tag news">News</div>
+          <h3>Associated Press – Middle East</h3>
+          <p>Regional breaking news and incident context. Cross-check operational claims with official aviation sources.</p>
+          <a class="btn" href="https://apnews.com/hub/middle-east" target="_blank" rel="noopener noreferrer">Open AP Middle East</a>
+        </article>
+
+        <article class="card">
+          <div class="tag news">News</div>
+          <h3>BBC Middle East</h3>
+          <p>Regional developments, security events and broader context relevant to aviation risk monitoring.</p>
+          <a class="btn" href="https://www.bbc.com/news/world/middle_east" target="_blank" rel="noopener noreferrer">Open BBC Middle East</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title"><span>6</span> Daily Management Assessment</h2>
+      <div class="assessment">
+        <div class="assessment-grid">
+          <div class="field">
+            <strong>Overall Regional Risk Level</strong>
+            Insert: Low / Moderate / High / Critical
+          </div>
+          <div class="field">
+            <strong>Countries / FIRs of Concern</strong>
+            Insert affected countries, FIRs or routes.
+          </div>
+          <div class="field">
+            <strong>Key Changes Since Previous Update</strong>
+            Summarise new restrictions, closures, incidents or advisories.
+          </div>
+          <div class="field">
+            <strong>Operational Impact</strong>
+            State route, schedule, crew, airport or passenger impact.
+          </div>
+          <div class="field">
+            <strong>Required Management Action</strong>
+            State decision, approval, escalation or monitoring requirement.
+          </div>
+          <div class="field">
+            <strong>Next Review</strong>
+            Insert next scheduled or event-driven review time.
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <strong>Security &amp; Quality Assurance</strong><br />
+      Internal management reference. Links open external sources in a new browser tab.
+      Verify all time-sensitive information with the relevant aviation authority before operational use.
+    </div>
+  </footer>
+
+  <script>
+    const dateElement = document.getElementById("reportingDate");
+    const now = new Date();
+    dateElement.textContent = new Intl.DateTimeFormat("en-GB", {
+      day: "2-digit",
+      month: "long",
+      year: "numeric",
+      timeZone: "Asia/Colombo"
+    }).format(now);
+  </script>
+</body>
+</html>
